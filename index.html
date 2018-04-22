@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/bootstrap-theme.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <script src="jquery/jquery.js"></script>
+  <script src="jquery/jquery-ui.js"></script>
+  <title>Calculadora de Rendimento</title>
+</head>
+
+<body class="container">
+  <h1 class="text-center titulo">Calculadora de Rendimento</h1>
+
+  <div id="jnl"></div>
+
+  <form class="form" onsubmit="tituloController.adiciona(event)">
+    <!-- Data -->
+    <div class="form-group">
+      <label for="data">Data</label>
+      <input type="date" class="form-control" id="data" required autofocus>
+    </div>
+
+    <!-- Quantidade -->
+    <div class="form-group">
+      <label for="quantidade">Quantidade</label>
+      <input class="form-control" type="number" id="quantidade" min="1" required>
+    </div>
+
+    <!-- Valor -->
+    <div class="form-group">
+      <label for="valor">Valor </label>
+      <input class="form-control" type="number" min="0" id="valor" required>
+    </div>
+
+    <div class="form-group">
+      <label for="tipo">Tipo</label>
+      <select name="tipo" id="tipo" class="tipo-form">
+        <option value="IPCA">IPCA</option>
+        <option value="Selic">Selic</option>
+        <option value="Prefixado">Pré-fixado</option>
+      </select>
+    </div>
+
+    <button class="btn btn-primary comprar" type="submit">Comprar</button>
+
+    <button class="btn btn-primary venderTudo" type="button" onclick="tituloController.apagaTudo()">Vender tudo</button>
+  </form>
+
+  <div id="titulosView"></div>
+
+  <script src="js/model/Titulo.js"></script>
+  <script src="js/model/ListaTitulo.js"></script>
+  <script src="js/model/Analise.js"></script>
+  <script src="js/controller/TituloController.js"></script>
+  <script src="js/view/TitulosView.js"></script>
+  <script src="js/model/DateHelper.js"></script>
+  <script>
+    let tituloController = new TituloController();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+body {
+  background-color: #DBDDDA;
+  font-family: "Roboto", sans-serif;
+}
+
+.titulo {
+  margin-top: 1rem;
+}
+
+.comprar {
+  margin-top: 1rem;
+}
+
+.venderTudo {
+  margin-top: 1rem;
+}
+
+#titulosView {
+  margin-top: 2rem;
+}
+
+#titulosView th {
+  border: 1px solid black;
+}
+
+#titulosView td {
+  border: 1px solid black;
+}
+
+.total {
+  background-color: lightcoral;
+}
+
+.fadeOut {
+	opacity: 0;
+	transition: .5s;
+}
+
+.tipo-form {
+  width: 100%;
+}
